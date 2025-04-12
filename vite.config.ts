@@ -12,12 +12,9 @@ export default defineConfig({
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: [],
       output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
+        globals: {},
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') return 'support-chat-widget.css';
           return assetInfo.name;
